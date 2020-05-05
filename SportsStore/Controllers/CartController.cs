@@ -1,13 +1,11 @@
 ﻿using System.Linq;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SportsStore.Infrastructure;
 using SportsStore.Models;
 using SportsStore.Models.ViewModels;
 
 namespace SportsStore.Controllers
 {
-    public class CartController:Controller
+    public class CartController : Controller
     {
         private IProductRepository repository;
         private Cart cart;

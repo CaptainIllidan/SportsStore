@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Order>
 
-@{ 
+@{
     ViewBag.Title = "Orders";
     Layout = "_AdminLayout";
 }
@@ -41,6 +41,8 @@
             }
         }
     </table>
-} else {
+}
+else
+{
     <div class="text-center">No Unshipped Orders</div>
 }

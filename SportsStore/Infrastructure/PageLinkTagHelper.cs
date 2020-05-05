@@ -4,15 +4,12 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using SportsStore.Models.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SportsStore.Infrastructure
 {
-    [HtmlTargetElement("div", Attributes ="page-model")]
-    public class PageLinkTagHelper: TagHelper
+    [HtmlTargetElement("div", Attributes = "page-model")]
+    public class PageLinkTagHelper : TagHelper
     {
         private IUrlHelperFactory urlHelperFactory;
 
@@ -31,7 +28,7 @@ namespace SportsStore.Infrastructure
 
         [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
         public Dictionary<string, object> PageUrlValues { get; set; }
-            = new Dictionary<string, object>(); 
+            = new Dictionary<string, object>();
 
         public bool PageClassEnabled { get; set; } = false;
         public string PageClass { get; set; }

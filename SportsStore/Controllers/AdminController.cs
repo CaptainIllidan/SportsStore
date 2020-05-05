@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportsStore.Models;
@@ -23,7 +20,7 @@ namespace SportsStore.Controllers
             return View(repository.Products);
         }
 
-        public ViewResult Edit(int productId) => 
+        public ViewResult Edit(int productId) =>
             View(repository.Products
                 .FirstOrDefault(p => p.ProductID == productId));
 
@@ -37,7 +34,7 @@ namespace SportsStore.Controllers
                 return RedirectToAction("Index");
             }
             else
-            {                
+            {
                 // there is something wrong with the data values
                 return View(product);
             }
@@ -51,7 +48,7 @@ namespace SportsStore.Controllers
             Product deletedProduct = repository.DeleteProduct(productId);
             if (deletedProduct != null)
             {
-                TempData["message"] = $"{deletedProduct.Name} was deleted"; 
+                TempData["message"] = $"{deletedProduct.Name} was deleted";
             }
             return RedirectToAction("Index");
         }

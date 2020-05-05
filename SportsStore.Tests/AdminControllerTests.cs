@@ -6,6 +6,7 @@ using Moq;
 using SportsStore.Controllers;
 using SportsStore.Models;
 using Xunit;
+
 namespace SportsStore.Tests
 {
     public class AdminControllerTests
@@ -60,7 +61,7 @@ namespace SportsStore.Tests
 
         [Fact]
         public void Cannot_Edit_Nonexistent_Product()
-        {    
+        {
             // Arrange - create the mock repository
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[] {

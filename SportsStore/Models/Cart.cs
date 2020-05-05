@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SportsStore.Models
 {
@@ -21,7 +19,7 @@ namespace SportsStore.Models
             CartLine line = lineCollection
                 .FirstOrDefault(p => p.Product.ProductID == product.ProductID);
 
-            if(line == null)
+            if (line == null)
             {
                 lineCollection.Add(new CartLine
                 {

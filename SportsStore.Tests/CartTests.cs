@@ -78,8 +78,8 @@ namespace SportsStore.Tests
         public void Calculate_Cart_Total()
         {
             //Arrange
-            Product p1 = new Product { ProductID = 1, Name = "P1", Price=100M };
-            Product p2 = new Product { ProductID = 2, Name = "P2", Price=50M };
+            Product p1 = new Product { ProductID = 1, Name = "P1", Price = 100M };
+            Product p2 = new Product { ProductID = 2, Name = "P2", Price = 50M };
 
             Cart target = new Cart();
 

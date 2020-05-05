@@ -1,12 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SportsStore.Models
 {
-    public class EFOrderRepository:IOrderRepository
+    public class EFOrderRepository : IOrderRepository
     {
         private ApplicationDbContext context;
 
